@@ -7,7 +7,9 @@ public class Main {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		float largura = 0  , altura ;
+		
+		float largura = 0  , altura , area , perimetro;
+		int opcao ;
 		System.out.println("Digite a largura do retangulo: ");
 		largura = sc.nextFloat();
 		if (largura <= 0) {
@@ -28,6 +30,33 @@ public class Main {
 			}
 		}
 		
-	}
+		System.out.println("MENU");
+		System.out.println("1 - Mostrar Area");
+		System.out.println("2 - Mostrar perimetro");
+		System.out.println("3 - Sair");
+		System.out.print("Digite uma opção: ");
+		opcao = sc.nextInt();
+		
+		if (opcao < 1||  opcao > 3) {
+			
+			while (opcao < 1 ||  opcao > 3) {
+				System.out.println("OPÇÃO INVALIDA" );
+				opcao = sc.nextInt();
+				System.out.println("MENU");
+				System.out.println("1 - Mostrar Area");
+				System.out.println("2 - Mostrar perimetro");
+				System.out.println("3 - Sair");
+				}
+			}
+		
+		area = altura *largura;
+		perimetro =( altura * 2) + (largura * 2);
+		
+		if (opcao == 1){
+			System.out.println("AREA = " + area);			
+		}
+		
+		
+	}	
 
 }
