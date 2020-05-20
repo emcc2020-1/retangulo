@@ -18,6 +18,15 @@ public class Main {
 			}
 		}
 		
+		System.out.println("Digite a altura do retangulo: ");
+		altura = sc.nextFloat();
+		if (altura <= 0) {
+	
+		while (altura <= 0 ) {
+			System.out.println("O valor deve ser positivo. Tente novamente: " );
+			altura = sc.nextFloat();
+			}
+		}
 		
 	}
 
