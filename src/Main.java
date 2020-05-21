@@ -40,6 +40,7 @@ public class Main {
 		if (opcao < 1||  opcao > 3) {
 			
 			while (opcao < 1 ||  opcao > 3) {
+				System.out.println();
 				System.out.println("OPÇÃO INVALIDA" );
 				opcao = sc.nextInt();
 				System.out.println("MENU");
@@ -48,15 +49,49 @@ public class Main {
 				System.out.println("3 - Sair");
 				}
 			}
-		
-		area = altura *largura;
-		perimetro =( altura * 2) + (largura * 2);
-		
-		if (opcao == 1){
-			System.out.println("AREA = " + area);			
-		}
-		
-		
-	}	
+			
+			while (opcao != 3) {
+				System.out.println();
+				System.out.println("MENU");
+				System.out.println();
+				System.out.println("1 - Mostrar Area");
+				System.out.println("2 - Mostrar perimetro");
+				System.out.println("3 - Sair");
+				
+				if(opcao == 1) {
+					area = altura *largura;
+					System.out.println();
+					System.out.println("AREA : %.2f%n" + area);
+					opcao = sc.nextInt();
+				}
+				else {
+					if(opcao == 2) {
+						perimetro =( altura * 2) + (largura * 2);
+						System.out.println();
+						System.out.println("PERIMETRO : %.2f%n" + perimetro);
+						opcao = sc.nextInt();
+				}
+					else{
+						if(opcao == 3) {
+						System.out.println();
+						System.out.println("FIM DO PROGRAMA!");
+						sc.close();
+						}
+						else {
+							System.out.println();
+							System.out.println("OPÇÃO INVÁLIDA");
+							opcao = sc.nextInt();
+							}
+						}
+				     }
+				
+				}
+			
+			sc.close();
+			
+			}
+			
+		}		
 
-}
+	
+
