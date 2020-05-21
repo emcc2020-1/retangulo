@@ -52,8 +52,7 @@ public class Main {
 			
 			while (opcao != 3) {
 				System.out.println();
-				System.out.println("MENU");
-				System.out.println();
+				System.out.println("MENU");				
 				System.out.println("1 - Mostrar Area");
 				System.out.println("2 - Mostrar perimetro");
 				System.out.println("3 - Sair");
@@ -61,32 +60,27 @@ public class Main {
 				if(opcao == 1) {
 					area = altura *largura;
 					System.out.println();
-					System.out.println("AREA : %.2f%n" + area);
+					System.out.println("AREA : " + area);
 					opcao = sc.nextInt();
 				}
-				else {
-					if(opcao == 2) {
+				else if(opcao == 2) {
 						perimetro =( altura * 2) + (largura * 2);
 						System.out.println();
-						System.out.println("PERIMETRO : %.2f%n" + perimetro);
+						System.out.println("PERIMETRO : " + perimetro);
 						opcao = sc.nextInt();
 				}
-					else{
-						if(opcao == 3) {
-						System.out.println();
-						System.out.println("FIM DO PROGRAMA!");
-						sc.close();
-						}
-						else {
+					else {
 							System.out.println();
 							System.out.println("OPÇÃO INVÁLIDA");
 							opcao = sc.nextInt();
-							}
-						}
-				     }
+							}							     
 				
 				}
-			
+			if(opcao == 3) {
+				System.out.println();
+				System.out.println("FIM DO PROGRAMA!");
+				sc.close();
+				}
 			sc.close();
 			
 			}
